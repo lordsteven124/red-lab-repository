@@ -21,22 +21,17 @@ if __name__ == "__main__":
     # Run tests manually if script is executed directly
     print("Running tests...")
     
-    try:
-        test_addition()
-        print("✓ test_addition passed")
-    except AssertionError:
-        print("✗ test_addition failed")
+    tests = [
+        (test_addition, "test_addition"),
+        (test_string_concatenation, "test_string_concatenation"),
+        (test_list_length, "test_list_length")
+    ]
     
-    try:
-        test_string_concatenation()
-        print("✓ test_string_concatenation passed")
-    except AssertionError:
-        print("✗ test_string_concatenation failed")
-    
-    try:
-        test_list_length()
-        print("✓ test_list_length passed")
-    except AssertionError:
-        print("✗ test_list_length failed")
+    for test_func, test_name in tests:
+        try:
+            test_func()
+            print(f"✓ {test_name} passed")
+        except AssertionError:
+            print(f"✗ {test_name} failed")
     
     print("\nAll tests completed!")
