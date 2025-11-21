@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: product_management_db
+    environment:
+      POSTGRES_DB: ProductManagementDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - product_network
+
+  backend:
+    build: ./backend/ProductManagement.API
+    container_name: product_management_api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=ProductManagementDB;Username=postgres;Password=postgres
+    ports:
+      - "5000:8080"
+    depends_on:
+      - postgres
+    networks:
+      - product_network
+
+volumes:
+  postgres_data:
+
+networks:
+  product_network:
+    driver: bridge

@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductManagementApp", "ProductManagementApp", "{52C5F95E-A653-9FC5-0DC4-CEA36E15898F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{1563F9CD-A88E-D7DA-A8BE-0AD61C4E11E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManagement.API", "ProductManagementApp\backend\ProductManagement.API\ProductManagement.API.csproj", "{7A405C56-DB85-BE67-EB4F-07E0E0FDDAE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A405C56-DB85-BE67-EB4F-07E0E0FDDAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A405C56-DB85-BE67-EB4F-07E0E0FDDAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A405C56-DB85-BE67-EB4F-07E0E0FDDAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A405C56-DB85-BE67-EB4F-07E0E0FDDAE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1563F9CD-A88E-D7DA-A8BE-0AD61C4E11E8} = {52C5F95E-A653-9FC5-0DC4-CEA36E15898F}
+		{7A405C56-DB85-BE67-EB4F-07E0E0FDDAE8} = {1563F9CD-A88E-D7DA-A8BE-0AD61C4E11E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47C5E88E-AEA7-4DEF-961C-E83ADF6B3F15}
+	EndGlobalSection
+EndGlobal
